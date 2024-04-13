@@ -1,0 +1,124 @@
+
+
+.buttonClose{
+        background-color: transparent;
+        color: red;
+        position: absolute;
+        top:10px;
+        right: 10px;
+        max-width: 30%;
+ }
+
+ .buttonFav{
+        background-color: transparent;
+        color: red;
+        position: absolute;
+        top:10px;
+        left: 10px;
+        max-width: 30%;
+ }
+ 
+.imagen{
+    padding-top: 10px;
+	  width: 40%;
+	  height: 40%;
+    border-radius: 15px;
+} 
+
+.name{
+    color: antiquewhite;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+   
+    text-align: center;
+    
+
+}
+.status{
+    color: antiquewhite;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.species{
+    color: antiquewhite;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+
+}
+
+.genero{
+    color:blanchedalmond;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+
+/* Clases para una Flip Card */
+
+.flipCard {
+  margin-top: 15px;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: white;  
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.img{
+    padding-top: 10px;
+	width: 80%;
+	height: 80%;
+    border-radius: 15px;
+}
+
+/* This container is needed to position the front and back side */
+.flipCardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flipCard:hover .flipCardInner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flipCardFront, .flipCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flipCardFront {
+  background-color: transparent;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Style the back side */
+.flipCardBack {
+  background-color: rgb(52, 54, 99);
+  border-radius: 15px;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+
+
+

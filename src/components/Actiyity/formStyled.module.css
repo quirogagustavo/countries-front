@@ -1,0 +1,134 @@
+
+
+.activitiesPage {
+   height: 50%;
+   width: 50%;
+   margin-top: 10px;
+   padding-top: 50px;
+   margin-left: auto;
+   margin-right: auto;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+    
+
+}
+
+
+ 
+.activitie {
+   margin-top: 10px;
+   padding-top: 10px;
+   width: 25%;
+   border-color: #f0eaea;
+   border-style: solid;
+   display: inline-block;
+   border-radius: 20px;
+   padding: 10px; 
+  
+}
+
+.activitie a {
+   margin-top: 25px;
+   text-align: center;
+}
+
+.formActivitie {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   align-content: center;
+}
+
+.formActivitie span {
+   text-align: left;
+   font-size: 23px;
+   margin-left: 20px;
+   color: #f7f3f3;
+}
+
+.inputItems {
+   width: 100%;
+   background: #b6adad;
+   border-radius: 25px;
+   margin: 4px 0 10px 4px;
+   padding: 10px;
+   display: flex; 
+}
+
+.inputElement {
+   margin-left: 100px;
+}
+
+.icon {
+      padding: 8px;
+      color: #f0eaea;
+      min-width: 30px;
+      text-align: center;
+}
+
+.inputNormal {
+      width: 100%;
+      border: 0;
+      background: none;
+      font-size: 16px;
+      padding: 8px 0;
+      outline: none;
+}
+.inputInvalido {
+      width: 100%;
+         border: 2px;
+         border-style: solid;
+         border-color: red;
+         background: rgb(219, 167, 167);
+         font-size: 16px;
+         padding: 8px 0;
+         outline: none;
+}
+.inputValido {
+   width: 100%;
+   border: 2px;
+   border-color: green;
+   border-style:solid;
+   background: rgb(197, 236, 197);
+   font-size: 16px;
+   padding: 8px 0;
+   outline: none;
+   color: #131212;
+}
+
+button[type="submit"] {
+   width: 90%;
+   border: 0;
+   border-radius: 25px;
+   padding: 14px;
+   background: #008552;
+   color: #FFF;
+   display: inline-block;
+   cursor: pointer;
+   font-size: 16px;
+   font-weight: bold;
+   margin-top: 10px;
+   transition: ease all 0.3s;
+   margin-left: 15px;
+   border-bottom: 0px;
+}
+
+button[type="submit"]:hover {
+   opacity: 0.9;
+}
+
+.background {
+   width: 70%;
+   padding: 10px;
+   height: 100vh;
+   background: url('../../../public/img/imgLogin.jpg') center no-repeat;
+   background-size:cover;
+   margin: 4px auto;
+   height: 200px;
+}
+
+
+
+
+
