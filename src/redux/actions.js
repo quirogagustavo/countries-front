@@ -1,11 +1,13 @@
 import axios from 'axios';
 import { GET_COUNTRIES, ORDER_NAME, ORDER_POB, FILTER_CONTINENT,POST_ACTIVITIE, ACTIVITIES__SUCCESS, ACTIVITIES__FAILURE } from './actions-types';
-
+const URL_LOCAL='http://localhost:3001'
+const URL_REMOTO='https://countries-server-wndw.onrender.com'
 
 // Accion para traer todos los paises la uso
 export function getCountries() {
     return async (dispatch) => {
-      const res = await axios.get("https://countries-server-wndw.onrender.com/countries/");
+      const URL=URL_REMOTO+'/countries/'
+      const res = await axios.get(URL);
       //http://localhost:3001/
 
       const datos=res.data;
@@ -37,7 +39,7 @@ export const filterContinent=(continente)=>{
 
 export function postActivities(newAct) {
   console.log(newAct)
-  const apiUrl="https://countries-server-wndw.onrender.com//activities/"
+  const apiUrl=URL_REMOTO+"/activities/"
   return async (dispatch) => {
     try {
     const res = await axios.post(apiUrl,newAct);

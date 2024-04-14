@@ -26,7 +26,7 @@
 } 
 
 .name{
-    color: antiquewhite;
+    color: rgb(48, 46, 44);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 15px;
    
@@ -34,12 +34,13 @@
     
 
 }
-.status{
+ .contienete{
     color: antiquewhite;
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
 }
 
+/*
 .species{
     color: antiquewhite;
     font-family:Georgia, 'Times New Roman', Times, serif;
@@ -52,25 +53,25 @@
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
 }
-
+ */
 
 /* Clases para una Flip Card */
 
 .flipCard {
-  margin-top: 15px;
-  border-radius: 15px;
+  margin-top: 5px;
+  border-radius: 20px;
   border-style: solid;
-  border-color: white;  
+  border-color: rgb(129, 91, 91);  
   background-color: transparent;
-  width: 300px;
-  height: 300px;
+  width: 220px;
+  height: 220px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
 .img{
     padding-top: 10px;
-	width: 80%;
-	height: 80%;
+	  width: 50%;
+	  height: 50%;
     border-radius: 15px;
 }
 

@@ -51,13 +51,13 @@ import { Link } from 'react-router-dom';
           <div className={cardStyled.flipCard}>
             <div className={cardStyled.flipCardInner}>
                <div className={cardStyled.flipCardFront}>
-                  <img className={cardStyled.img} src={flag} alt='Imagen' />
+                  <img className={cardStyled.img} src={flag} alt='Imagen' height ="30" width="30" />
                   <h3 className={cardStyled.name}>{name}</h3>
                </div>  
                <div className={cardStyled.flipCardBack}>
                      {/* {isFav ? (<button className={cardStyled.buttonFav} onClick={handleFavorite}><img src="../../../public/img/addFavorite.avif" height ="30" width="30" /></button>) : (<button className={cardStyled.buttonFav} onClick={handleFavorite}><img src="../../../public/img/removeFav.png" height ="30" width="30" /></button>) }  */}
                      
-                     <img className={cardStyled.imagen} src={flag} alt='Imagen' />
+                     <img className={cardStyled.imagen} src={flag} alt='Imagen' height ="30" width="30" />
                      {/* <button className={cardStyled.buttonClose} onClick={handleClose}><img src="../../../public/img/cerrar.svg" height ="30" width="30" /></button> */}
                      <Link className={cardStyled.name} to={`/detail/${id}`}><button className={cardStyled.buttonDetail}>{name}</button></Link>
                       <h4 className={cardStyled.continente}>{continente}</h4>

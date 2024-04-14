@@ -1,16 +1,19 @@
 .container {
-    margin-top:40px;
+    margin-top:50px;
+    padding-top: 20px;
     border-style: solid;
-    border-color: bisque;
+    border-color: rgb(27, 26, 25);
     border-radius: 20px;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-content: space-between;
     position: relative;
+    text-align: center;
    
 }
 
@@ -18,66 +21,71 @@
     display: flex;
     flex-direction: column;
     margin-left: 20px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     justify-content: space-between;
     /* width: 50%; */
 }
 
 .name {
-    color: antiquewhite;
+    color: rgb(59, 50, 38);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 25px;
 
 }
 
-.status {
+.itemDetail {
     padding-left: 10px;
-    color: antiquewhite;
+    color: rgb(156, 134, 104);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
+    /* margin-left: 100px; */
 }
 
-.species {
-    padding-left: 10px;
-    color: antiquewhite;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px;
-
-}
-
-.genero {
-    padding-left: 10px;
-    color: blanchedalmond;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px;
-}
-
-.origen{
-    padding-left: 10px;
-    color: blanchedalmond;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px;
-}
 
 .imagen {
    border-radius: 20px;
-   max-width: 80%;
+   max-width: 60%;
    margin-top: 5px;
 
 }
 
 .itemFlex{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content:flex-start; 
     width: 100%;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
-.buttonClose{
+/* .buttonClose{
         background-color: transparent;
         color: red;
-        position: absolute;
+        border: 1px;
+        border-color: black;
+  
         top:0px;
         right: 0px;
         max-width: 30%;
+        margin: 0 auto;
  }
+ */
+ .buttonClose {
+    color: #1f0b06 !important;
+    background-color:white;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 20px;
+    border: 2px solid;
+    border-color: #e70e0e;
+    transition: all 1s ease;
+    /* position: relative; */
+    margin-left: 300px;
+    line-height: 10px;
+    padding-bottom: 20px;
+  }
+  
+  .buttonClose:hover {
+    background: #ee0707;
+    color: #fff !important;
+  }

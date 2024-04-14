@@ -92,10 +92,11 @@ const handleSearchActividad=()=>{
 
   <nav className={navStyled.navcontainer}>
           
-          {/* navStyled.navcontainer */}
-          <div className={navStyled.sortContainer}>
-            <p>Sort by</p>
-            <select onChange={handleOrder}>
+          
+          <div>
+          
+          <label htmlFor="">Ordenar </label> 
+            <select onChange={handleOrder} className={navStyled.itemNavContainer} >
               <option value="A">A-Z</option>
               <option value="D">Z-A</option>
               <option value="PA">↑ population</option>
@@ -103,9 +104,10 @@ const handleSearchActividad=()=>{
             </select>
           
           </div>
-          <div className={navStyled.sortContainer}>
-            <p>Filter by</p>
-              <select onChange={handlreRegion}>
+          <div>
+          
+          <label htmlFor="">Filtrar </label> 
+              <select onChange={handlreRegion} className={navStyled.itemNavContainer}>
                 <option value="Africa">Africa</option>
                 <option value="Antarctica">Antarctica</option>
                 <option value="Asia">Asia</option>
@@ -116,17 +118,19 @@ const handleSearchActividad=()=>{
                 <option value="Todos">Todos</option>
               </select>
           </div>
-          <div className={navStyled.sortContainer}>
+          <div>
+          
                     <label htmlFor="">Filtrar por actividad:</label> 
-                    <input type="text" value={actividad} onChange={handleActividad}  placeholder='Escriba nombre de actividad...' />
-                    <button onClick={handleSearchActividad}>Buscar</button>
-                    {/* value={inputs.nombre} onChange={handleChange} className={formStyled.inputElement} */}
+                    <input type="text" value={actividad} onChange={handleActividad} className={navStyled.itemNavContainer} placeholder='Escriba nombre de actividad...' />
+                    <button onClick={handleSearchActividad} className={navStyled.botonFilter}>Buscar</button>
+                    
           </div>
-          <div className={navStyled.sortContainer}>
+          <div>
+          
                     <label htmlFor="">Buscar pais:</label> 
-                    <input type="text" value={pais} onChange={handlpais} className={navStyled.sortContainer}  placeholder='Escriba nombre de un pais...' />
-                    {/* value={inputs.nombre} onChange={handleChange} className={formStyled.inputElement} */}
-                    <button onClick={handleSearchPais}>Buscar</button>
+                    <input type="text" value={pais} onChange={handlpais} className={navStyled.itemNavContainer}  placeholder='Escriba nombre de un pais...' />
+                    
+                    <button onClick={handleSearchPais} className={navStyled.botonFilter}>Buscar</button>
           </div> 
 
       </nav>

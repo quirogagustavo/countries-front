@@ -38,31 +38,37 @@ const Detail=()=>{
          <div className={detailStyled.cardText}>
             <h2 className={detailStyled.name}>{country[0].name}</h2>
             <div className={detailStyled.itemFlex}>
-               {/* <img src="../../../public/img/icono_status.png" height ="30" width="30" /> */}
-               <p className={detailStyled.status}>{country[0].continente}</p>
+                  <label htmlFor="">Continente: </label> 
+                  <p className={detailStyled.itemDetail}>{country[0].continente}</p>
+            </div>
+
+            <div className={detailStyled.itemFlex}>
+               <label htmlFor="">Capital: </label>
+               <p className={detailStyled.itemDetail}>{country[0].capital}</p>
             </div>
             <div className={detailStyled.itemFlex}>
-               {/* <img src="../../../public/img/iconoSpecie.avif" height ="30" width="30" />  */}
-               <p className={detailStyled.species}>{country[0].capital}</p>
+            <label htmlFor="">Subregion: </label>
+               <p className={detailStyled.itemDetail}>{country[0].subregion}</p>
             </div>
             <div className={detailStyled.itemFlex}>
-               {/* <img src="../../../public/img/icono_genero.png" height ="30" width="30" /> */}
-               <p className={detailStyled.genero}>{country[0].subregion}</p>
+            <label htmlFor="">Area: </label>
+               <p className={detailStyled.itemDetail}> {parseInt(country[0].area).toLocaleString("de-DE")}</p>
             </div>
             <div className={detailStyled.itemFlex}>
-               {/* <img src="../../../public/img/iconoOrigen.jpg" height ="30" width="30" /> */}
-               <p className={detailStyled.origen}> {country[0].area}</p>
+            <label htmlFor="">Poblacion: </label>
+               <p className={detailStyled.itemDetail}> {parseInt(country[0].poblacion).toLocaleString("de-DE")}</p>
             </div>
             <div className={detailStyled.itemFlex}>
-               {/* <img src="../../../public/img/iconoOrigen.jpg" height ="30" width="30" /> */}
-               <p className={detailStyled.origen}> {country[0].poblacion}</p>
+               <button className={detailStyled.buttonClose} onClick={()=>navigate('/countries')}>Cerrar</button>
             </div>
+            
          </div>
 
          <div>
             <img src={country[0].flag} alt='Imagen' className={detailStyled.imagen}/>  
          </div>
-         <button className={detailStyled.buttonClose} onClick={()=>navigate('/countries')}>Cerrar</button>
+
+         
 
          {/* <img src="../../../public/img/cerrar.svg" height ="30" width="30" /> */}
      </div> 
