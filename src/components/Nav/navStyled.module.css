@@ -42,40 +42,6 @@
 }
 
 
-
-
-/* 
-.inputSearch {
-   width: 50%;
-   background-color: transparent;
-   border-radius: 25px;
-   margin: 4px 0 10px 4px;
-   padding: 10px;
-   display: flex;
-   justify-content: space-between;
-   border-style: solid;
-   border-color: #ebe5e5;
-}
-
-
-.icon {
-      padding: 15px 0 0 0;
-      color: #ebe5e5;
-      min-width: 50px;
-      text-align: center;
-}
-
-.inputNormal {
-      width: 70%;
-      border: 0;
-      background: rgb(241, 240, 238);
-      font-size: 16px;
-      padding: 8px 0 0 4px;
-      outline: none;
-      border-radius: 15px;
-}
- */
-
  .itemNavContainer {
       font-size: 16px; /* Tamaño de fuente */
       border-radius: 4px; /* Bordes redondeados */

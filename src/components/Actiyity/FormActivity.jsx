@@ -89,19 +89,19 @@ function FormActivity () {
   return (
   <div>
     <div className={formStyled.activitiesPage}>
-        <div className={formStyled.activities}>
+        
             <form onSubmit={handleSubmit} className={formStyled.formActivitie}>
             
             
             <div className={formStyled.inputItems}>
-                <label htmlFor="">Nombre:</label> 
+                <label htmlFor="" className={formStyled.labelInput}>Nombre:</label> 
                 <input type="text" name='nombre' value={inputs.nombre} onChange={handleChange} className={formStyled.inputElement} placeholder='Escrib nombre de actividad...' />
              
             </div>
             {errors.nombre!=='' && (<span>{errors.nombre}</span>)}
 
             <div className={formStyled.inputItems}>
-                <label htmlFor="">Dificultad:</label>
+                <label htmlFor="" className={formStyled.labelInput}>Dificultad:</label>
                 <select onChange={handleChange} name='dificultad' value={inputs.dificultad} className={formStyled.inputElement} placeholder='Elija un grado de dificultad...' >
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -113,13 +113,13 @@ function FormActivity () {
             </div>
 
             <div className={formStyled.inputItems}>
-                <label htmlFor="">Duracion:</label>
+                <label htmlFor="" className={formStyled.labelInput}>Duracion:</label>
                 <input type="text" name='duracion' value={inputs.duracion}  onChange={handleChange} className={formStyled.inputElement} placeholder='Escriba una duracion de la actividad...' />
             </div>
             {errors.duracion!=='' && (<span>{errors.duracion}</span>)}
             
             <div className={formStyled.inputItems}>
-                <label htmlFor="">Temporada:</label>
+                <label htmlFor="" className={formStyled.labelInput}>Temporada:</label>
                 <select onChange={handleChange} name='temporada' value={inputs.temporada} className={formStyled.inputElement} placeholder='Elija una temporada...'>
                     <option value="Invierno">Invierno</option>
                     <option value="Otoño">Otoño</option>
@@ -129,7 +129,7 @@ function FormActivity () {
             </div>
             
             <div className={formStyled.inputItems}>
-            <label htmlFor="">Pais:</label>
+            <label htmlFor="" className={formStyled.labelInput}>Pais:</label>
                 <select onChange={handlePais} name='pais'  value={inputPais.pais} className={formStyled.inputElement} placeholder='Elija una pais...'>
                     {countries.slice().sort(orderNameAsc).map((option) => (
                     <option key={option.id} value={option.id}>
@@ -143,7 +143,7 @@ function FormActivity () {
              {inputPais.pais.length!==0 && 
             <div className={formStyled.inputItems}>
             
-            <label htmlFor="">Paises Seleccionados:</label>                
+            <label htmlFor="" className={formStyled.labelInput}>Paises Seleccionados:</label>                
                 <select name='paisSeleccionado'   className={formStyled.inputElement} placeholder='Paises seleccionados...'>
                     
                     {inputPais.pais.slice().sort(orderNameAsc).map((option) => (
@@ -154,9 +154,9 @@ function FormActivity () {
                 </select>
             </div>              
         }             
-            <button type='submit'>Enviar</button>
+            <button type='submit' className={formStyled.boton}>Enviar</button>
             </form>
-        </div>
+        
     </div>
   </div>)
 }
