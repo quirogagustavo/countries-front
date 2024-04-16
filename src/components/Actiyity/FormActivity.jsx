@@ -4,7 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { orderNameAsc } from '../../redux/orderFunction';
 import formStyled from './formStyled.module.css'
 import styled from 'styled-components';
-import { postActivities } from '../../redux/actions';
+import { postActivities,getCountries } from '../../redux/actions';
+
 import { validation } from './validation';
 
 // eslint-disable-next-line
@@ -81,6 +82,8 @@ function FormActivity () {
       setInputs(inicial)
       setErrors({})
       setInputPais(paisInicial)
+      //Actuasliza estado global con la nueva actividad
+      dispatch(getCountries())
     //} 
     // En el else debo guardar en la base de datos
    //     else window.alert('Debe llenar todos los campos')
