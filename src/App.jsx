@@ -13,7 +13,7 @@ function App() {
    const location=useLocation()
    const dispatch=useDispatch();
   
-  //Cargo el estado global con los paises de la API
+  //Actualizo el estado global con los paises de la API
   useEffect(()=>{
     dispatch(getCountries())
   }, []);

@@ -104,18 +104,27 @@
    color: #f0eaea;
  }
 
+ .botonesContainer{
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    
+    justify-content: space-around; /* Distribuye los elementos con espaciado uniforme */
+    
+ }
+
  .boton {
    color: #597a85 !important;
-   font-size: 15px;
-   font-weight: 500;
-   padding: 0.5em 1.2em;
-   background: rgba(0,0,0,0);
-   border: 2px solid;
-   border-color: #585f61;
-   transition: all 1s ease;
-   width: 40%;
-   margin-top: 15px;
-   /* position: relative; */
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 20px;
+  margin-left: 50px;
+  background: rgba(0,0,0,0);
+  border: 2px solid;
+  border-color: #585f61;
+  transition: all 1s ease;
+  position: relative;
  }
 
  .boton:hover {

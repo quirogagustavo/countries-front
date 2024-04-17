@@ -159,10 +159,12 @@ function FormActivity () {
                     ))}
                 </select>
             </div>              
-        }             
+        }         
+
+        <div className={formStyled.botonesContainer}>    
             <button type='submit' onClick={handleSubmit} className={formStyled.boton}>Guardar</button>
             <button type='submit' onClick={handleClose} className={formStyled.boton}>Volver a Paises</button>
-
+            </div>
             </form>
         
     </div>
