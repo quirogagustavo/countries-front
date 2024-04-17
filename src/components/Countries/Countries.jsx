@@ -21,14 +21,15 @@ function Countries(/* {myFavorites }*/) {
   
   //Cargo el estado global con los paises de la API
   
-  const countries =useSelector((state)=>state.countries)
+  // const countries =useSelector((state)=>state.countries)
   const [aux,setAux]=useState(false)
   const [countriesLocal, setcountriesLocal]=useState(countries)
   const [pais,setPais]=useState('')
   const [actividad,setActividad]=useState('')
   
   useEffect(()=>{
-    dispatch(getCountries())
+    const countries =useSelector((state)=>state.countries)
+    // dispatch(getCountries())
   }, [countries]);
 
   // const dispatch=useDispatch()
