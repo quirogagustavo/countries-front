@@ -24,9 +24,9 @@ function Countries(/* {myFavorites }*/) {
    
     dispatch(getCountries())
   }, []);
-  const countries =useSelector((state)=>state.countries)
+  const countrie =useSelector((state)=>state.countries)
   const [aux,setAux]=useState(false)
-  const [countriesLocal, setcountriesLocal]=useState(countries)
+  const [countriesLocal, setcountriesLocal]=useState(countrie)
   const [pais,setPais]=useState('')
   const [actividad,setActividad]=useState('')
   
@@ -45,7 +45,7 @@ function Countries(/* {myFavorites }*/) {
    
    const handlreRegion=(e)=>{
      const region=e.target.value
-     setcountriesLocal(region !== 'Todos' ? countriesLocal.filter((country)=>{return country.continente === region}) : countries)
+     setcountriesLocal(region !== 'Todos' ? countriesLocal.filter((country)=>{return country.continente === region}) : countrie)
   }
  
 
@@ -72,7 +72,7 @@ const handlpais=(e)=>{
 }
 
 const handleSearchPais=()=>{
-  setcountriesLocal(pais !== '' ? countriesLocal.filter((country)=>{return country.name.toLowerCase().includes(pais.toLowerCase()) }) : countries)
+  setcountriesLocal(pais !== '' ? countriesLocal.filter((country)=>{return country.name.toLowerCase().includes(pais.toLowerCase()) }) : countrie)
 }
 
 const handleActividad=(e)=>{
@@ -83,7 +83,7 @@ const handleActividad=(e)=>{
 }
 
 const handleSearchActividad=()=>{
-  setcountriesLocal(actividad !== '' ? countriesLocal.filter((country)=>{return country.Activities.some(act => act.nombre.toLowerCase().includes(actividad.toLocaleLowerCase()))}) : countries)
+  setcountriesLocal(actividad !== '' ? countriesLocal.filter((country)=>{return country.Activities.some(act => act.nombre.toLowerCase().includes(actividad.toLocaleLowerCase()))}) : countrie)
 }
 
 
