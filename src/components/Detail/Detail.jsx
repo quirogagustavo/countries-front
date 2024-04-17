@@ -37,6 +37,12 @@ const Detail=()=>{
        <div className={detailStyled.container}> 
          <div className={detailStyled.cardText}>
             <h2 className={detailStyled.name}>{country[0].name}</h2>
+            
+            <div className={detailStyled.itemFlex}>
+               <label htmlFor="">Codigo: </label>
+               <p className={detailStyled.itemDetail}>{country[0].id}</p>
+            </div>
+
             <div className={detailStyled.itemFlex}>
                   <label htmlFor="">Continente: </label> 
                   <p className={detailStyled.itemDetail}>{country[0].continente}</p>
