@@ -7,6 +7,7 @@ import styled from 'styled-components';
 import { postActivities,getCountries } from '../../redux/actions';
 
 import { validation } from './validation';
+import { useNavigate } from 'react-router-dom';
 
 // eslint-disable-next-line
 const regexEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
@@ -25,6 +26,7 @@ function FormActivity () {
   const countries=useSelector((state)=> state.countries)
   const inicial={nombre:'', dificultad:'',duracion:'', temporada:''}
   const paisInicial= {pais:[]}
+  const navigate=useNavigate();
 
   
   const [inputs,setInputs]=useState(inicial)
@@ -70,24 +72,25 @@ function FormActivity () {
   const handleSubmit=(event)=>{
     event.preventDefault()
     console.log(inputs)
-    const arr=Object.values(errors)
-    //if (arr.length===0){
-     // window.alert('Datos completos')
+   // const arr=Object.values(errors)
+   
       const paises=inputPais.pais.map(country => country.id)
       let actividadAgregar=inputs
       const countryId = 'countryId';
       actividadAgregar[countryId]=paises
-      //console.log(actividadAgregar)
+   
       dispatch(postActivities(actividadAgregar))
       setInputs(inicial)
       setErrors({})
       setInputPais(paisInicial)
-      //Actuasliza estado global con la nueva actividad
+   
       dispatch(getCountries())
-    //} 
-    // En el else debo guardar en la base de datos
-   //     else window.alert('Debe llenar todos los campos')
+   
   }
+
+  const handleClose = () => {
+    navigate("/countries")
+  };
   
   return (
   <div>
@@ -157,7 +160,9 @@ function FormActivity () {
                 </select>
             </div>              
         }             
-            <button type='submit' className={formStyled.boton}>Enviar</button>
+            <button type='submit' onClick={handleSubmit} className={formStyled.boton}>Guardar</button>
+            <button type='submit' onClick={handleClose} className={formStyled.boton}>Volver a Paises</button>
+
             </form>
         
     </div>
